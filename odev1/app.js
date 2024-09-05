@@ -26,7 +26,10 @@ function showTime(){
 
 }
 
+const d = new Date();
+let day = d.getDay();
+function getClock() {
+    day == 1 ? day = "Pazartesi" : day == 2 ? day="Salı" : day == 3 ? day = "Çarşamba" : day == 4 ? day = "Perşembe": day == 5 ? day="Cuma": day == 6 ? day = "Cumartesi": day="Pazar"}
+    getClock()
 
-myClock.innerHTML=showTime();
-
-
+myClock.innerHTML= `${showTime()} ${day}`
